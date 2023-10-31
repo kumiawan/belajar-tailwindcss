@@ -1,0 +1,17 @@
+{
+  "name": "semada-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./public/css/style.css --watch",
+    "prod": "tailwindcss -o ./public/css/final.css --minify",
+    "serv": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
