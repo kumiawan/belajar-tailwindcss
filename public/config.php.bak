@@ -9,7 +9,7 @@ $username = "root";
 #password defaul is empty
 $password = "";
 #your default database name on mysql
-$database = "semada";
+$database = "multiuser";
 
 try {
     // create connection
@@ -21,7 +21,7 @@ try {
     }
 
     // database connected
-    echo "Connection Success!";
+    #echo "Connection Success!";
 
     #for shutdown database session
     #$con->close();

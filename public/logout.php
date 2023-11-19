@@ -1,7 +1,5 @@
 <?php
-require 'config.php';
-$_SESSION = [];
-session_unset();
+session_start();
 session_destroy();
-header("Location: login.php");
-
+header("location:login.php");
+?>
