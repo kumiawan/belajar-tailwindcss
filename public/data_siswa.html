@@ -103,7 +103,7 @@
             </ul>
           </div>
           <div class="flex justify-center items-center mx-auto mb-32 bg-green-500 w-40 rounded-full text-white h-10">
-            <img src="assets/icon/icon_keluar.png" alt="tombol keluar">
+            <img src="assets/icon/icon_keluar.png" alt="logout">
             <button type="" class="p-4">
               keluar
             </button>
@@ -118,33 +118,174 @@
           Data Siswa
         </div>
         <div class="flex flex-col h-full w-full p-24">
-          <div class="
-            w-full h-16
-            bg-red-50
-            flex
-            justify-end
-            items-center
-            ">
-            <label for="" class="text-lg">cari</label>
-            <input type="text" name="" value="" 
-              class="
-              border-2 
-              border-black
-              w-60 h-1/2
-              ml-4
-              mr-8
-              px-2
-              ">
-
+          <div class="w-full h-16 flex justify-end items-center">
+            <label for="" class="font-semibold text-xl">cari</label>
+            <input type="text" name="" value="" class="border-2 border-black w-64 h-1/2 ml-4 px-2">
           </div>
 
-          <div class="h-full w-full bg-green-200">
-            
+          <div class="h-full w-full">
+            <table class="my-8 py-12 w-full">
+              <tr class="text-center">
+                <th class="border border-black">Nis</th>
+                <th class="border border-black">Nama</th>
+                <th class="border border-black">Kelas</th>
+                <th class="border border-black">Jenis Kelamin</th>
+                <th class="border border-black">Action</th>
+              </tr>
+              <tr class="text-center">
+                <td class="border border-black">1234567890ABC</td>
+                <td class="border border-black">Dimas Fajar Kurniawan</td>
+                <td class="border border-black">XI A</td>
+                <td class="border border-black">Laki-Laki</td>
+                <td class="border border-black gap-2 p-2">
+                  <a href="/form_edit_data_siswa.html">
+                    <button type="" class="bg-gray-500 w-20 text-white rounded-md hover:text-gray-200">Edit</button>
+                  </a>
+                  <button 
+                    onclick="showBtnHapus()"
+                    type="" class="bg-red-700 w-20 text-white rounded-md hover:text-gray-200">Hapus</button>
+                </td>
+              </tr>
+              <tr class="text-center">
+                <td class="border border-black">row 1</td>
+                <td class="border border-black">row 2</td>
+                <td class="border border-black">row 3</td>
+                <td class="border border-black">row 4</td>
+                <td class="border border-black">row 5</td>
+              </tr>
+              <tr class="text-center">
+                <td class="border border-black">row 1</td>
+                <td class="border border-black">row 2</td>
+                <td class="border border-black">row 3</td>
+                <td class="border border-black">row 4</td>
+                <td class="border border-black">row 5</td>
+              </tr>
+              <tr class="text-center">
+                <td class="border border-black">row 1</td>
+                <td class="border border-black">row 2</td>
+                <td class="border border-black">row 3</td>
+                <td class="border border-black">row 4</td>
+                <td class="border border-black">row 5</td>
+              </tr>
+            </table>
+            <!-- start modal tombol hapus-->
+            <div 
+              onclick="hideBtnHapus()"
+              id="btnHapus"
+              class="fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen justify-center items-center 
+              opacity-0 hidden transition-opacity duration-200">
+              <div 
+                onclick="event.stopImmediatePropagation()"
+                class="text-center bg-white w-3/12 h-64 rounded-lg shadow">
+                <h1 class="mx-auto my-5 py-6 w-80">Apakah anda ingin menghapus data siswa nama_siswa ?</h1>
+                <div class="flex my-12 justify-evenly items-center">
+                  <button type="" class="bg-red-500 w-20 rounded-full text-white text-lg hover:bg-red-600">Ya</button>
+                  <button 
+                    onclick="hideBtnHapus()"
+                    type="" class="bg-green-500 w-20 rounded-full text-white text-lg hover:bg-green-600">Tidak</button>
+                </div>
+              </div>
+            </div>
+            <!-- end modal tombol hapus-->
+	    <div class="flex flex-row mb-3 p-2 justify-end ">
+              <button 
+                onclick="showTambahSiswa()"
+                type="submit" class="flex justify-center items-center w-40 h-10 rounded-xl bg-green-500 text-white">
+                <span class="font-semibold text-2xl text-white p-1">+</span>
+                tambah siswa
+              </button>
+
+            </div>
+            <!-- Start Modal form tambah siswa-->
+            <div
+              onclick="hideTambahSiswa()"
+              id="tambahSiswa"
+              class="fixed top-0 left-0 bg-black w-screen h-screen bg-opacity-50 justify-center items-center 
+              transition-opacity hidden opacity-0 duartion-200">
+              <div
+                class="relative w-1/2 h-4/5 bg-[#EAFFEF] rounded-lg my-10 mx-auto overflow-hidden">
+                <div 
+                  class="p-2 bg-green-500 text-center font-semibold text-2xl text-white">
+                  <h1>Edit Data Siswa</h1>
+                  <div class="absolute top-1 right-6 font-semibold text-white text-3xl">
+                    <button
+                      onclick="hideTambahSiswa()"
+                      type="" class="hover:text-gray-200">X</button>
+                  </div>
+                </div>
+                  <div 
+                  onclick="event.stopImmediatePropagation()"
+                  class="p-16 rounded-b-lg">
+                  <form>
+                    <div class="mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Nis</label>
+                      <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
+                    </div>
+                    <div class="mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Nama</label>
+                      <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
+                    </div>
+                    <div class="mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Kelas</label>
+                      <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
+                    </div>
+                    <div class="mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Jenis Kelamin</label>
+                      <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
+                    </div>
+                  </form>
+                  <div class="mt-6 flex w-full justify-end font-semibold text-white">
+                    <button type="" class="mr-6 p-2 bg-green-500 w-32 rounded-full">Simpan</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Modal form tambah siswa-->
           </div>
         </div>
 
         <!-- END CONTENT -->
       </div>
     </div>
+    <script>
+    /* Modal btn Hapus*/
+    function showBtnHapus(){
+      let hapus = document.getElementById('btnHapus');
+      hapus.classList.remove('hidden');
+      hapus.classList.add('flex');
+      setTimeout(()=>{
+        hapus.classList.add('opacity-100');
+      },100);
+    }
+    function hideBtnHapus(){
+      let hapus = document.getElementById('btnHapus');
+      hapus.classList.add('opacity-0');
+      hapus.classList.remove('opacity-100');
+      setTimeout(()=>{
+        hapus.classList.add('hidden');
+        hapus.classList.remove('flex');
+      },100);
+    }
+
+    /* Modal Edit Data Siswa*/
+    function showTambahSiswa(){
+      let tambah = document.getElementById('tambahSiswa');
+      tambah.classList.remove('hidden');
+      tambah.classList.add('flex');
+      setTimeout(()=>{
+        tambah.classList.add('opacity-100');
+      },100);
+    }
+    function hideTambahSiswa(){
+      let tambah = document.getElementById('tambahSiswa');
+      tambah.classList.add('opacity-0');
+      tambah.classList.remove('opacity-100');
+      setTimeout(()=>{
+        tambah.classList.add('hidden');
+        tambah.classList.remove('flex');
+      },100);
+    }
+
+    </script>
   </body>
 </html>
