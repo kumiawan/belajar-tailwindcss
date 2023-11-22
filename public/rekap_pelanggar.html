@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Data Siswa</title>
+    <title>Rekap Pelanggar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
@@ -41,9 +41,9 @@
                 hover:bg-green-500 hover:text-white">
                 <a href="#data_siswa" class="ml-4 w-full inline-block">Dashboard</a>
               </li>
-              <li class="mb-4 text-white bg-green-500  rounded-md font-semibold py-1 
-                hover:bg-green-500">
-                <a href="#data_siswa" class="ml-4 w-full inline-block">Data Siswa</a>
+              <li class="mb-4 text-black bg-gray-200  rounded-md font-semibold py-1 
+                hover:bg-green-500 hover:text-white">
+                <a href="data_siswa.html" class="ml-4 w-full inline-block">Data Siswa</a>
               </li>
               <li class="flex ml-6 mb-4 text-black rounded-md items-center font-semibold py-1 
                 ">
@@ -71,22 +71,23 @@
                   "
                 >Membuat Absen</a>
               </li>
-
               <li class="flex ml-6 mb-4 text-black rounded-md items-center font-semibold py-1 
                 ">
                 <img src="assets/icon/play.png" alt="activity" class="w-4 h-4">
                 <a href="rekap_absen.html" 
                   class="px-2 rounded-md 
                   w-full h-8
+                  bg-grey-200
+                  text-black
                   hover:bg-gray-100
+                  hover:text-black
                   inline-block
                   "
                 >Rekap Presensi</a>
               </li>
-
               <li class="mb-4 text-black bg-gray-200 rounded-md font-semibold py-1 
                 hover:bg-green-500 hover:text-white">
-                <a href="#" class="ml-4 w-full inline-block">Pelanggaran Siswa</a>
+                <a href="pelanggaran_siswa.html" class="ml-4 w-full inline-block">Pelanggaran Siswa</a>
               </li>
               <li class="flex ml-6 mb-4 text-black rounded-md items-center font-semibold py-1 
                 ">
@@ -94,14 +95,16 @@
                 <a href="#" 
                   class="px-2 rounded-md 
                   w-full h-8
-                  hover:bg-gray-100
+                  bg-green-500
+                  text-white
+                  hover:text-gray-200
                   inline-block
                   "
                 >Rekap Pelanggar</a>
               </li>
               <li class="mb-4 text-black bg-gray-200 rounded-md font-semibold py-1 
                 hover:bg-green-500 hover:text-white">
-                <a href="#" class="ml-4 w-full inline-block">Riwayat</a>
+                <a href="riwayat.html" class="ml-4 w-full inline-block">Riwayat</a>
               </li>
               <li class="mb-4 text-black bg-gray-200 rounded-md font-semibold py-1 
                 hover:bg-green-500 hover:text-white">
@@ -128,7 +131,7 @@
         <!-- START CONTENT -->
 
         <div class="flex justify-center items-center rounded-t-lg h-16 bg-[#575757] text-center font-bold text-white text-2xl">
-          Data Siswa
+          Rekap Pelanggar
         </div>
         <div class="flex flex-col h-full w-full p-24">
           <div class="w-full h-16 flex justify-end items-center">
@@ -139,25 +142,18 @@
           <div class="h-full w-full">
             <table class="my-8 py-12 w-full">
               <tr class="text-center">
-                <th class="border border-black">Nis</th>
+                <th class="border border-black">No</th>
                 <th class="border border-black">Nama</th>
                 <th class="border border-black">Kelas</th>
                 <th class="border border-black">Jenis Kelamin</th>
-                <th class="border border-black">Action</th>
+                <th class="border border-black">Point</th>
               </tr>
               <tr class="text-center">
-                <td class="border border-black">1234567890ABC</td>
-                <td class="border border-black">Dimas Fajar Kurniawan</td>
+                <td class="border border-black">1</td>
+                <td class="border border-black">Rahmatullah</td>
                 <td class="border border-black">XI A</td>
                 <td class="border border-black">Laki-Laki</td>
-                <td class="border border-black gap-2 p-2">
-                  <a href="/form_edit_data_siswa.html">
-                    <button type="" class="bg-gray-500 w-20 text-white rounded-md hover:text-gray-200">Edit</button>
-                  </a>
-                  <button 
-                    onclick="showBtnHapus()"
-                    type="" class="bg-red-700 w-20 text-white rounded-md hover:text-gray-200">Hapus</button>
-                </td>
+                <td class="border border-black">5</td>
               </tr>
             </table>
             <!-- start modal tombol hapus-->
@@ -169,9 +165,9 @@
               <div 
                 onclick="event.stopImmediatePropagation()"
                 class="text-center bg-white w-3/12 h-64 rounded-lg shadow">
-                <h1 class="mx-auto my-5 py-6 w-80">Apakah anda ingin menghapus data siswa nama_siswa ?</h1>
+                <h1 class="text-red-600 font-bold mx-auto my-5 py-6 w-80">Peringatan data berikut akan dihapus secara permanen! setuju atau tidak</h1>
                 <div class="flex my-12 justify-evenly items-center">
-                  <button type="" class="bg-red-500 w-20 rounded-full text-white text-lg hover:bg-red-600">Ya</button>
+                  <button type="" class="bg-red-500 w-20 rounded-full text-white text-lg hover:bg-red-600">Setuju</button>
                   <button 
                     onclick="hideBtnHapus()"
                     type="" class="bg-green-500 w-20 rounded-full text-white text-lg hover:bg-green-600">Tidak</button>
@@ -179,18 +175,15 @@
               </div>
             </div>
             <!-- end modal tombol hapus-->
-            <div class="flex flex-row mb-3 p-2 justify-end ">
+            <div class="flex flex-row mb-3 p-2 justify-end">
               <button 
-                onclick="showTambahSiswa()"
-                type="submit" class="flex justify-center items-center w-40 h-10 rounded-xl bg-green-500 text-white">
-                <span class="font-semibold text-2xl text-white p-1">+</span>
-                tambah siswa
-              </button>
-
+                type="submit" 
+                class="flex justify-center items-center w-40 h-10 rounded-xl bg-green-500 text-white"
+              >Cetak Pelanggaran</button>
             </div>
-            <!-- Start Modal form tambah siswa-->
+            <!-- Start Modal Detail Siswa-->
             <div
-              onclick="hideTambahSiswa()"
+              onclick="showTambahSiswa()"
               id="tambahSiswa"
               class="fixed top-0 left-0 bg-black w-screen h-screen bg-opacity-50 justify-center items-center 
               transition-opacity hidden opacity-0 duartion-200">
@@ -198,7 +191,7 @@
                 class="relative w-1/2 h-4/5 bg-[#EAFFEF] rounded-lg my-10 mx-auto overflow-hidden">
                 <div 
                   class="p-2 bg-green-500 text-center font-semibold text-2xl text-white">
-                  <h1>Edit Data Siswa</h1>
+                  <h1>Detail Siswa ?nama_siswa</h1>
                   <div class="absolute top-1 right-6 font-semibold text-white text-3xl">
                     <button
                       onclick="hideTambahSiswa()"
@@ -225,6 +218,17 @@
                       <label for="" class="font-semibold inline-block w-52">Jenis Kelamin</label>
                       <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
                     </div>
+                    <div class="mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Alasan</label>
+                      <input type="text" name="" value="" class="inline-block border border-green-500 px-2 w-1/2 h-24">
+                    </div>
+                    <div class="flex mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Berkas pendukung</label>
+                      <a href="https://cdn-cms.pgimgs.com/static/2022/04/Contoh-Surat-Persetujuan-Orang-Tua.pdf" target="_blank" class="flex text-blue-700">
+                        <img src="assets/icon/pdf.png" alt="" class="w-4 mx-1">
+                        file_izin_rahmatullah.pdf</a>
+                    </div>
+
                   </form>
                   <div 
                     onclick="showNotifSuccess()"
