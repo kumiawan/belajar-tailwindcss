@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "tailwindcss -i ./src/input.css -o ./public/css/style.css --watch",
-    "prod": "tailwindcss -o ./public/css/final.css --minify",
+    "final": "tailwindcss -o ./public/css/final.css --minify",
     "serv": "lite-server"
   },
   "keywords": [],
@@ -13,5 +13,8 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.5"
+  },
+  "dependencies": {
+    "lite-server": "^2.6.1"
   }
 }

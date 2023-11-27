@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Rekap Presensi</title>
+    <title>Rekap Absen</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="bg-[#F3EEEA]">
+    <!-- start navbar -->
     <nav class="bg-white shadow-md">
       <div class="max-w-screen px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-20 items-center justify-between">
@@ -14,11 +15,11 @@
             <div class="flex items-center">
               <img class="w-14" src="assets/icon/logosmada.png" alt="logo smada" />
             </div>
-            <div class="hidden sm:ml-6 sm:block"></div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <div class="relative ml-3 justify-end">
-              <div>
+              <div class="flex justify-center items-center gap-2 text-xl font-semibold">
+                <span>Admin</span>
                 <button type="button"
                   class="relative flex rounded-full bg-green-400">
                   <img class="w-10 rounded-full" src="assets/icon/user.png" alt="profileUser" />
@@ -30,106 +31,84 @@
       </div>
       </div>
     </nav>
+    <!-- end navbar -->
     <div class="flex flex-row h-screen">
       <div class="grow w-4/12">
         <!-- Start Sidebar -->
-        <div class="flex flex-col justify-between bg-white m-7 w-96 h-screen rounded-lg text-xl p-4">
-          <div class="">
+        <div class="flex flex-col justify-between bg-white m-7 w-96 h-full rounded-lg text-xl p-4 overflow-auto">
+          <div>
             <ul>
-
-              <li class="mb-4 text-black bg-gray-200 rounded-md font-semibold py-1 
+              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow 
                 hover:bg-green-500 hover:text-white">
-                <a href="#data_siswa" class="ml-4 w-full inline-block">Dashboard</a>
+                <a href="dashboard.html" class="ml-4 w-full inline-block">Dashboard</a>
               </li>
-              <li class="mb-4 text-black bg-gray-200  rounded-md font-semibold py-1 
+              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="data_siswa.html" class="ml-4 w-full inline-block">Data Siswa</a>
+                <a href="data_siswa.html" class="ml-4 w-full inline-block">Data Murid</a>
               </li>
-              <li class="flex ml-6 mb-4 text-black rounded-md items-center font-semibold py-1 
-                ">
-                <img src="assets/icon/play.png" alt="activity" class="w-4 h-4">
-                <a href="tambah_data_siswa.html" 
-                  class="px-2 rounded-md 
-                  w-full h-8
-                  inline-block
-                  hover:bg-gray-100
-                  "
-                >Tambah Siswa</a>
-              </li>
-              <li class="mb-4 text-black bg-gray-200 rounded-md font-semibold py-1 
+              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="permohonan_izin.html" class="ml-4 w-full inline-block">Permohonan Izin Siswa</a>
+                <a href="pelanggaran_siswa.html" class="ml-4 w-full inline-block">Pelanggaran</a>
               </li>
-              <li class="flex ml-6 mb-4 text-black rounded-md items-center font-semibold py-1 
-                ">
-                <img src="assets/icon/play.png" alt="activity" class="w-4 h-4">
-                <a href="buat_absen.html" 
-                  class="px-2 rounded-md 
-                  w-full h-8
-                  hover:bg-gray-100
-                  inline-block
-                  "
-                >Membuat Absen</a>
-              </li>
-              <li class="flex ml-6 mb-4 text-black rounded-md items-center font-semibold py-1 
-                ">
-                <img src="assets/icon/play.png" alt="activity" class="w-4 h-4">
-                <a href="#" 
-                  class="px-2 rounded-md 
-                  w-full h-8
-                  bg-green-500
-                  text-white
-                  hover:bg-green-400
-                  hover:text-black
-                  inline-block
-                  "
-                >Rekap Presensi</a>
-              </li>
-              <li class="mb-4 text-black bg-gray-200 rounded-md font-semibold py-1 
+              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 flex items-center shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="pelanggaran_siswa.html" class="ml-4 w-full inline-block">Pelanggaran Siswa</a>
+                <a href="absen_murid.html" class="ml-4 w-full inline-block">Absen Murid</a>
+                <img src="assets/icon/Polygon.png" alt="activity" class="mr-4 w-4 h-4">
               </li>
-              <li class="flex ml-6 mb-4 text-black rounded-md items-center font-semibold py-1 
-                ">
-                <img src="assets/icon/play.png" alt="activity" class="w-4 h-4">
-                <a href="rekap_pelanggar.html" 
-                  class="px-2 rounded-md 
-                  w-full h-8
-                  hover:bg-gray-100
-                  inline-block
-                  "
-                >Rekap Pelanggar</a>
-              </li>
-              <li class="mb-4 text-black bg-gray-200 rounded-md font-semibold py-1 
+              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="#" class="ml-4 w-full inline-block">Riwayat</a>
+                <a href="permohonan_izin.html" class="ml-4 w-full inline-block">Permohonan Izin Murid</a>
               </li>
-              <li class="mb-4 text-black bg-gray-200 rounded-md font-semibold py-1 
+              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="#" class="ml-4 w-full inline-block">Kalender</a>
+                <a href="rekap_pelanggar.html" class="ml-4 w-full inline-block">Rekap Pelanggaran</a>
               </li>
-              <li class="mb-4 text-black bg-gray-200 rounded-md font-semibold py-1 
+              <li class="mb-4 text-white bg-[#1CC642] rounded-md font-semibold py-1 shadow
+                hover:bg-green-500 hover:text-gray-200">
+                <a href="rekap_absen.html" class="ml-4 w-full inline-block">Rekap Absen</a>
+              </li>
+              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="#" class="ml-4 w-full inline-block">Profile</a>
+                <a href="profile.html" class="ml-4 w-full inline-block">Profile</a>
               </li>
-
             </ul>
           </div>
-          <div class="flex justify-center items-center mx-auto mb-32 bg-green-500 w-40 rounded-full text-white h-10">
+          <div 
+            onclick="logout()"
+            class="flex justify-center items-center mx-auto mb-32 bg-green-500 w-40 rounded-full text-white h-10">
             <img src="assets/icon/icon_keluar.png" alt="logout">
             <button type="" class="p-4">
               keluar
             </button>
           </div>
-
         </div>
         <!-- End Sidebar -->
+        <!-- Modal Sidebar -->
+        <div 
+          onclick="exitLogout()"
+          id="modalLogout"
+          class="fixed bg-black w-screen h-screen bg-opacity-30 top-0 left-0 
+          justify-center items-center opacity-0 hidden transition-opacity duration-200 backdrop-blur-sm shadow">
+          <div 
+            onclick="event.stopImmediatePropagation()"
+            class="rounded-lg text-center bg-green-100 w-96 h-36">
+            <h1 class="p-4">Apakah anda yakin keluar ?</h1>
+            <div class="flex justify-evenly mt-3">
+              <button type="" class="bg-green-500 text-white text-lg w-20 h-7 rounded-full shadow
+                hover:bg-green-600">Ya</button>
+              <button 
+                onclick="exitLogout()"
+                type="" 
+                class="bg-red-500 text-white text-lg w-20 h-7 rounded-full shadow hover:bg-red-600">Tidak</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="flex flex-col w-full  mt-8 mr-16 rounded-lg bg-white h-full">
         <!-- START CONTENT -->
 
         <div class="flex justify-center items-center rounded-t-lg h-16 bg-[#575757] text-center font-bold text-white text-2xl">
-          Rekap Presensi
+          Rekap Absen
         </div>
         <div class="flex flex-col h-full w-full p-24">
           <div class="w-full h-16 flex justify-end items-center">
@@ -137,7 +116,7 @@
             <input type="text" name="" value="" class="border-2 border-black w-64 h-1/2 ml-4 px-2">
           </div>
 
-          <div class="h-full w-full">
+          <div class="h-full w-full overflow-auto">
             <table class="my-8 py-12 w-full">
               <tr class="text-center">
                 <th class="border border-black">No</th>
@@ -180,7 +159,7 @@
             <div class="flex flex-row mb-3 p-2 justify-end">
               <button 
                 type="submit" 
-                class="flex justify-center items-center w-40 h-10 rounded-xl bg-green-500 text-white"
+                class="hidden justify-center items-center w-40 h-10 rounded-xl bg-green-500 text-white"
               >Cetak Absen</button>
             </div>
             <!-- Start Modal Detail Siswa-->
@@ -228,7 +207,7 @@
                       <label for="" class="font-semibold inline-block w-52">Berkas pendukung</label>
                       <a href="https://cdn-cms.pgimgs.com/static/2022/04/Contoh-Surat-Persetujuan-Orang-Tua.pdf" target="_blank" class="flex text-blue-700">
                         <img src="assets/icon/pdf.png" alt="" class="w-4 mx-1">
-                        file_izin_rahmatullah.pdf</a>
+                          file_izin_rahmatullah.pdf</a>
                     </div>
 
                   </form>
@@ -257,54 +236,6 @@
         <!-- END CONTENT -->
       </div>
     </div>
-    <script>
-    /* Nofit Berhasil*/
-    function showNotifSuccess(){
-      let success = document.getElementById('successEdit');
-      success.classList.remove('hidden');
-      success.classList.add('flex');
-      setTimeout(()=>{
-      },100);
-      success.classList.remove('opacity-0');
-    }
-    /* Modal btn Hapus*/
-    function showBtnHapus(){
-      let hapus = document.getElementById('btnHapus');
-      hapus.classList.remove('hidden');
-      hapus.classList.add('flex');
-      setTimeout(()=>{
-        hapus.classList.add('opacity-100');
-      },100);
-    }
-    function hideBtnHapus(){
-      let hapus = document.getElementById('btnHapus');
-      hapus.classList.add('opacity-0');
-      hapus.classList.remove('opacity-100');
-      setTimeout(()=>{
-        hapus.classList.add('hidden');
-        hapus.classList.remove('flex');
-      },100);
-    }
-
-    /* Modal Edit Data Siswa*/
-    function showTambahSiswa(){
-      let tambah = document.getElementById('tambahSiswa');
-      tambah.classList.remove('hidden');
-      tambah.classList.add('flex');
-      setTimeout(()=>{
-        tambah.classList.add('opacity-100');
-      },100);
-    }
-    function hideTambahSiswa(){
-      let tambah = document.getElementById('tambahSiswa');
-      tambah.classList.add('opacity-0');
-      tambah.classList.remove('opacity-100');
-      setTimeout(()=>{
-        tambah.classList.add('hidden');
-        tambah.classList.remove('flex');
-      },100);
-    }
-
-    </script>
+    <script src="js/modal.js"></script>
   </body>
 </html>
