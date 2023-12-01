@@ -44,7 +44,10 @@
             </div>
           </div>
           <div class="mt-5">
-            <button type="submit" name="login" value="" class="border-2 border-green-400 bg-green-400 text-white py-3 w-full rounded-[20px] hover:bg-transparent hover:text-green-700 font-semibold shadow-md">Log In</button>
+          <a href="dashboard.php">
+          <button 
+            type="submit" name="login" value="" class="border-2 border-green-400 bg-green-400 text-white py-3 w-full rounded-[20px] hover:bg-transparent hover:text-green-700 font-semibold shadow-md">Log In</button>
+          </a>
           </div>
         <!-- start modal forget password-->
         <div 

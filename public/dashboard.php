@@ -40,36 +40,36 @@
             <ul>
               <li class="mb-4 text-white bg-[#1CC642] rounded-md font-semibold py-1 shadow 
                 hover:bg-green-500 hover:text-gray-200">
-                <a href="dashboard.html" class="ml-4 w-full inline-block">Dashboard</a>
+                <a href="dashboard.php" class="ml-4 w-full inline-block">Dashboard</a>
               </li>
               <li class="mb-4 bg-gray-200  rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="data_siswa.html" class="ml-4 w-full inline-block">Data Murid</a>
+                <a href="data_siswa.php" class="ml-4 w-full inline-block">Data Murid</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="pelanggaran_siswa.html" class="ml-4 w-full inline-block">Pelanggaran</a>
+                <a href="pelanggaran_siswa.php" class="ml-4 w-full inline-block">Pelanggaran</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 flex items-center shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="absen_murid.html" class="ml-4 w-full inline-block">Absen Murid</a>
+                <a href="absen_murid.php" class="ml-4 w-full inline-block">Absen Murid</a>
                 <img src="assets/icon/Polygon.png" alt="activity" class="mr-4 w-4 h-4">
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="permohonan_izin.html" class="ml-4 w-full inline-block">Permohonan Izin Murid</a>
+                <a href="permohonan_izin.php" class="ml-4 w-full inline-block">Permohonan Izin Murid</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="rekap_pelanggar.html" class="ml-4 w-full inline-block">Rekap Pelanggaran</a>
+                <a href="rekap_pelanggar.php" class="ml-4 w-full inline-block">Rekap Pelanggaran</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="rekap_absen.html" class="ml-4 w-full inline-block">Rekap Absen</a>
+                <a href="rekap_absen.php" class="ml-4 w-full inline-block">Rekap Absen</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="profile.html" class="ml-4 w-full inline-block">Profile</a>
+                <a href="profile.php" class="ml-4 w-full inline-block">Profile</a>
               </li>
             </ul>
           </div>
@@ -132,4 +132,4 @@
     </div>
     <script src="js/modal.js"></script>
   </body>
-</html>
+<html>

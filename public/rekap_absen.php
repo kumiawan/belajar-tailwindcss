@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Absen Murid</title>
+    <title>Rekap Absen</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
@@ -15,7 +15,6 @@
             <div class="flex items-center">
               <img class="w-14" src="assets/icon/logosmada.png" alt="logo smada" />
             </div>
-            <div class="hidden sm:ml-6 sm:block"></div>
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
             <div class="relative ml-3 justify-end">
@@ -41,36 +40,36 @@
             <ul>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow 
                 hover:bg-green-500 hover:text-white">
-                <a href="dashboard.html" class="ml-4 w-full inline-block">Dashboard</a>
+                <a href="dashboard.php" class="ml-4 w-full inline-block">Dashboard</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="data_siswa.html" class="ml-4 w-full inline-block">Data Murid</a>
+                <a href="data_siswa.php" class="ml-4 w-full inline-block">Data Murid</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="pelanggaran_siswa.html" class="ml-4 w-full inline-block">Pelanggaran</a>
+                <a href="pelanggaran_siswa.php" class="ml-4 w-full inline-block">Pelanggaran</a>
               </li>
-              <li class="mb-4 text-white bg-[#1CC642] rounded-md font-semibold py-1 flex items-center shadow
-                hover:bg-green-500 hover:text-gray-200"">
-                <a href="absen_murid.html" class="ml-4 w-full inline-block">Absen Murid</a>
+              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 flex items-center shadow
+                hover:bg-green-500 hover:text-white">
+                <a href="absen_murid.php" class="ml-4 w-full inline-block">Absen Murid</a>
                 <img src="assets/icon/Polygon.png" alt="activity" class="mr-4 w-4 h-4">
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="permohonan_izin.html" class="ml-4 w-full inline-block">Permohonan Izin Murid</a>
+                <a href="permohonan_izin.php" class="ml-4 w-full inline-block">Permohonan Izin Murid</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="rekap_pelanggar.html" class="ml-4 w-full inline-block">Rekap Pelanggaran</a>
+                <a href="rekap_pelanggar.php" class="ml-4 w-full inline-block">Rekap Pelanggaran</a>
+              </li>
+              <li class="mb-4 text-white bg-[#1CC642] rounded-md font-semibold py-1 shadow
+                hover:bg-green-500 hover:text-gray-200">
+                <a href="rekap_absen.php" class="ml-4 w-full inline-block">Rekap Absen</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="rekap_absen.html" class="ml-4 w-full inline-block">Rekap Absen</a>
-              </li>
-              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
-                hover:bg-green-500 hover:text-white">
-                <a href="profile.html" class="ml-4 w-full inline-block">Profile</a>
+                <a href="profile.php" class="ml-4 w-full inline-block">Profile</a>
               </li>
             </ul>
           </div>
@@ -84,7 +83,7 @@
           </div>
         </div>
         <!-- End Sidebar -->
-        <!-- Modal sidebar -->
+        <!-- Modal Sidebar -->
         <div 
           onclick="exitLogout()"
           id="modalLogout"
@@ -108,39 +107,34 @@
       <div class="flex flex-col w-full  mt-8 mr-16 rounded-lg bg-white h-full">
         <!-- START CONTENT -->
 
-        <div class="flex justify-center items-center rounded-t-lg h-16 bg-[#575757] text-center font-bold text-white text-2xl">
-          Absen Murid
+        <div class="flex p-4 justify-center items-center rounded-t-lg h-16 bg-[#575757] text-center font-bold text-white text-2xl">
+          Rekap Absen
         </div>
         <div class="flex flex-col h-full w-full p-24">
           <div class="w-full h-16 flex justify-end items-center">
             <label for="" class="font-semibold text-xl">cari</label>
             <input type="text" name="" value="" class="border-2 border-black w-64 h-1/2 ml-4 px-2">
           </div>
+
           <div class="h-full w-full overflow-auto">
             <table class="my-8 py-12 w-full">
               <tr class="text-center">
-                <th class="border border-black">Absen</th>
+                <th class="border border-black">No</th>
                 <th class="border border-black">Nama</th>
                 <th class="border border-black">Kelas</th>
-                <th class="border border-black">Keterangan</th>
+                <th class="border border-black">Izin</th>
+                <th class="border border-black">Sakit</th>
+                <th class="border border-black">Alpha</th>
+                <th class="border border-black">Presentase</th>
               </tr>
               <tr class="text-center">
                 <td class="border border-black">1</td>
                 <td class="border border-black">Rahmatullah</td>
-                <td class="border border-black">XI MIPA 2</td>
-                <td class="text-green-500 font-bold border border-black">Masuk</td>
-              </tr>
-              <tr class="text-center">
-                <td class="border border-black">12</td>
-                <td class="border border-black">Dimas Fajar Kurniawan</td>
-                <td class="border border-black">XI MIPA 2</td>
-                <td class="text-green-500 font-bold border border-black">Masuk</td>
-              </tr>
-              <tr class="text-center">
-                <td class="border border-black">8</td>
-                <td class="border border-black">Fadias Nur Ahmadi</td>
-                <td class="border border-black">XI MIPA 2</td>
-                <td class="text-red-600 font-bold border border-black">Tipsen</td>
+                <td class="border border-black">XI A</td>
+                <td class="border border-black">-</td>
+                <td class="border border-black">-</td>
+                <td class="border border-black">-</td>
+                <td class="border border-black">100%</td>
               </tr>
             </table>
             <!-- start modal tombol hapus-->
