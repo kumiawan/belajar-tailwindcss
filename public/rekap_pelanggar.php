@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Rekap Absen</title>
+    <title>Rekap Pelanggar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
@@ -29,9 +29,7 @@
           </div>
         </div>
       </div>
-      </div>
     </nav>
-    <!-- end navbar -->
     <div class="flex flex-row h-screen">
       <div class="grow w-4/12">
         <!-- Start Sidebar -->
@@ -40,36 +38,36 @@
             <ul>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow 
                 hover:bg-green-500 hover:text-white">
-                <a href="dashboard.html" class="ml-4 w-full inline-block">Dashboard</a>
+                <a href="dashboard.php" class="ml-4 w-full inline-block">Dashboard</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="data_siswa.html" class="ml-4 w-full inline-block">Data Murid</a>
+                <a href="data_siswa.php" class="ml-4 w-full inline-block">Data Murid</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="pelanggaran_siswa.html" class="ml-4 w-full inline-block">Pelanggaran</a>
+                <a href="pelanggaran_siswa.php" class="ml-4 w-full inline-block">Pelanggaran</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 flex items-center shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="absen_murid.html" class="ml-4 w-full inline-block">Absen Murid</a>
+                <a href="absen_murid.php" class="ml-4 w-full inline-block">Absen Murid</a>
                 <img src="assets/icon/Polygon.png" alt="activity" class="mr-4 w-4 h-4">
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="permohonan_izin.html" class="ml-4 w-full inline-block">Permohonan Izin Murid</a>
-              </li>
-              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
-                hover:bg-green-500 hover:text-white">
-                <a href="rekap_pelanggar.html" class="ml-4 w-full inline-block">Rekap Pelanggaran</a>
+                <a href="permohonan_izin.php" class="ml-4 w-full inline-block">Permohonan Izin Murid</a>
               </li>
               <li class="mb-4 text-white bg-[#1CC642] rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-gray-200">
-                <a href="rekap_absen.html" class="ml-4 w-full inline-block">Rekap Absen</a>
+                <a href="rekap_pelanggar.php" class="ml-4 w-full inline-block">Rekap Pelanggaran</a>
               </li>
               <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
                 hover:bg-green-500 hover:text-white">
-                <a href="profile.html" class="ml-4 w-full inline-block">Profile</a>
+                <a href="rekap_absen.php" class="ml-4 w-full inline-block">Rekap Absen</a>
+              </li>
+              <li class="mb-4 bg-gray-200 rounded-md font-semibold py-1 shadow
+                hover:bg-green-500 hover:text-white">
+                <a href="profile.php" class="ml-4 w-full inline-block">Profile</a>
               </li>
             </ul>
           </div>
@@ -84,7 +82,7 @@
         </div>
         <!-- End Sidebar -->
         <!-- Modal Sidebar -->
-        <div 
+<div 
           onclick="exitLogout()"
           id="modalLogout"
           class="fixed bg-black w-screen h-screen bg-opacity-30 top-0 left-0 
@@ -107,8 +105,8 @@
       <div class="flex flex-col w-full  mt-8 mr-16 rounded-lg bg-white h-full">
         <!-- START CONTENT -->
 
-        <div class="flex justify-center items-center rounded-t-lg h-16 bg-[#575757] text-center font-bold text-white text-2xl">
-          Rekap Absen
+        <div class="flex p-4 justify-center items-center rounded-t-lg h-16 bg-[#575757] text-center font-bold text-white text-2xl">
+          Rekap Pelanggar
         </div>
         <div class="flex flex-col h-full w-full p-24">
           <div class="w-full h-16 flex justify-end items-center">
@@ -119,22 +117,36 @@
           <div class="h-full w-full overflow-auto">
             <table class="my-8 py-12 w-full">
               <tr class="text-center">
-                <th class="border border-black">No</th>
+                <th class="border border-black">Absen</th>
                 <th class="border border-black">Nama</th>
                 <th class="border border-black">Kelas</th>
-                <th class="border border-black">Izin</th>
-                <th class="border border-black">Sakit</th>
-                <th class="border border-black">Alpha</th>
-                <th class="border border-black">Presentase</th>
+                <th class="border border-black">Jenis Pelanggaran</th>
+                <th class="border border-black">Nilai/Bobot</th>
+                <th class="border border-black">Action</th>
               </tr>
               <tr class="text-center">
                 <td class="border border-black">1</td>
                 <td class="border border-black">Rahmatullah</td>
-                <td class="border border-black">XI A</td>
-                <td class="border border-black">-</td>
-                <td class="border border-black">-</td>
-                <td class="border border-black">-</td>
-                <td class="border border-black">100%</td>
+                <td class="border border-black">XI MIPA 2</td>
+                <td class="border border-black">Terlambat</td>
+                <td class="border border-black">25%</td>
+                <td class="border border-black p-4">
+                  <button 
+                    onclick="showBtnHapus()"
+                    type="" class="bg-red-700 w-32 text-white rounded-md hover:text-gray-200">Hapus</button>
+                </td>
+              </tr>
+              <tr class="text-center">
+                <td class="border border-black">8</td>
+                <td class="border border-black">Fadias Nur Ahmadi</td>
+                <td class="border border-black">XI MIPA 2</td>
+                <td class="border border-black">Terlambat</td>
+                <td class="border border-black">25%</td>
+                <td class="border border-black p-4">
+                  <button 
+                    onclick="showBtnHapus()"
+                    type="" class="bg-red-700 w-32 text-white rounded-md hover:text-gray-200">Hapus</button>
+                </td>
               </tr>
             </table>
             <!-- start modal tombol hapus-->
@@ -143,12 +155,14 @@
               id="btnHapus"
               class="fixed left-0 top-0 bg-black bg-opacity-50 w-screen h-screen justify-center items-center 
               opacity-0 hidden transition-opacity duration-200">
+              <!-- onclick="event.stopImmediatePropagation()" -->
               <div 
-                onclick="event.stopImmediatePropagation()"
                 class="text-center bg-white w-3/12 h-64 rounded-lg shadow">
                 <h1 class="text-red-600 font-bold mx-auto my-5 py-6 w-80">Peringatan data berikut akan dihapus secara permanen! setuju atau tidak</h1>
                 <div class="flex my-12 justify-evenly items-center">
-                  <button type="" class="bg-red-500 w-20 rounded-full text-white text-lg hover:bg-red-600">Setuju</button>
+                  <button 
+                    onclick="permissionDenied('Berhasil Dihapus!',3000)"
+                    type="" class="bg-red-500 w-20 rounded-full text-white text-lg hover:bg-red-600">Setuju</button>
                   <button 
                     onclick="hideBtnHapus()"
                     type="" class="bg-green-500 w-20 rounded-full text-white text-lg hover:bg-green-600">Tidak</button>
@@ -160,7 +174,7 @@
               <button 
                 type="submit" 
                 class="hidden justify-center items-center w-40 h-10 rounded-xl bg-green-500 text-white"
-              >Cetak Absen</button>
+              >Cetak Pelanggaran</button>
             </div>
             <!-- Start Modal Detail Siswa-->
             <div
