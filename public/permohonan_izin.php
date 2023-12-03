@@ -89,7 +89,7 @@
           onclick="exitLogout()"
           id="modalLogout"
           class="fixed bg-black w-screen h-screen bg-opacity-30 top-0 left-0 
-          justify-center items-center opacity-0 hidden transition-opacity duration-200 backdrop-blur-sm shadow">
+          justify-center items-center opacity-0 hidden transition-opacity duration-200 backdrop-blur-sm shadow z-50">
           <div 
             onclick="event.stopImmediatePropagation()"
             class="rounded-lg text-center bg-green-100 w-96 h-36">
@@ -119,7 +119,7 @@
 
           <div class="h-full w-full">
             <table class="my-8 py-12 w-full">
-              <thead class="stick top-0 z-0">
+              <thead class="sticky top-0 z-0">
                 <tr class="text-center bg-gray-200 shadow">
                   <th class="border border-black">No</th>
                   <th class="border border-black">Nama</th>
