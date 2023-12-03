@@ -124,10 +124,7 @@
           <table class="py-12 w-full">
             <thead class="sticky top-0 z-0">
               <tr class="text-center bg-gray-200 shadow">
-                <th 
-                  <button 
-                    onclick="sortTable('absen')"
-                    class="w-[10%] border border-black">Absen</th>
+                <th class="w-[10%] border border-black">Absen</th>
                 <th class="w-[10%] border border-black">Nis</th>
                 <th class="w-[40%] border border-black">Nama</th>
                 <th class="w-[10%] border border-black">Jenis Kelamin</th>

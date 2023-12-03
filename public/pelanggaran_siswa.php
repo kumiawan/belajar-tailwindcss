@@ -120,11 +120,14 @@
           </div>
           <div class="flex flex-row ">
             <table class="w-full h-full text-center border border-black">
-              <tr class="border border-black">
-                <th class="border border-black">Jenis Pelanggaran</th>
-                <th class="border border-black">Nilai/Bobot </th>
-                <th class="border border-black">Action</th>
-              </tr>
+              <thead class ="stiky top-0 z-0">
+                <tr class="text-center bg-gray-200 shadow">
+                  <th class="border border-black">Jenis Pelanggaran</th>
+                  <th class="border border-black">Nilai/Bobot </th>
+                  <th class="border border-black">Action</th>
+                </tr>
+              </thead>
+              <tbody>
               <tr>
                 <td class="border border-black">Terlambat</td>
                 <td class="border border-black">25%</td>
@@ -137,6 +140,7 @@
                     type="" class="w-36 h-8 bg-red-500 text-white shadow rounded-lg mx-2">Hapus</button>
                 </td>
               </tr>
+              </tbody>
             </table>
             <!-- Modal Action Table -->
             <!-- @btnEdit Start -->
