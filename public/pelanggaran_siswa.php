@@ -120,7 +120,7 @@
           </div>
           <div class="flex flex-row ">
             <table class="w-full h-full text-center border border-black">
-              <thead class ="sticky top-0 z-0">
+              <thead id="tableHeader" class ="sticky top-0 z-0">
                 <tr class="text-center bg-gray-200 shadow">
                   <th class="border border-black">Jenis Pelanggaran</th>
                   <th class="border border-black">Nilai/Bobot </th>

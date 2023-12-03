@@ -118,7 +118,7 @@
 
           <div class="h-full w-full overflow-auto">
             <table class="py-12 w-full">
-              <thead class="sticky top-0 z-0">
+              <thead id="tableHeader" class="sticky top-0 z-0">
               <tr class="text-center bg-gray-200 shadow">
                 <th class="border border-black">No</th>
                 <th class="border border-black">Nama</th>
