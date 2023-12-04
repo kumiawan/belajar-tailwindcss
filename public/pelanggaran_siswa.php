@@ -87,7 +87,7 @@
           onclick="exitLogout()"
           id="modalLogout"
           class="fixed bg-black w-screen h-screen bg-opacity-30 top-0 left-0 
-          justify-center items-center opacity-0 hidden transition-opacity duration-200 backdrop-blur-sm shadow">
+          justify-center items-center opacity-0 hidden transition-opacity duration-200 backdrop-blur-sm shadow z-50">
           <div 
             onclick="event.stopImmediatePropagation()"
             class="rounded-lg text-center bg-green-100 w-96 h-36">
@@ -120,11 +120,14 @@
           </div>
           <div class="flex flex-row ">
             <table class="w-full h-full text-center border border-black">
-              <tr class="border border-black">
-                <th class="border border-black">Jenis Pelanggaran</th>
-                <th class="border border-black">Nilai/Bobot </th>
-                <th class="border border-black">Action</th>
-              </tr>
+              <thead id="tableHeader" class ="sticky top-0 z-0">
+                <tr class="text-center bg-gray-200 shadow">
+                  <th class="border border-black">Jenis Pelanggaran</th>
+                  <th class="border border-black">Nilai/Bobot </th>
+                  <th class="border border-black">Action</th>
+                </tr>
+              </thead>
+              <tbody>
               <tr>
                 <td class="border border-black">Terlambat</td>
                 <td class="border border-black">25%</td>
@@ -137,6 +140,7 @@
                     type="" class="w-36 h-8 bg-red-500 text-white shadow rounded-lg mx-2">Hapus</button>
                 </td>
               </tr>
+              </tbody>
             </table>
             <!-- Modal Action Table -->
             <!-- @btnEdit Start -->

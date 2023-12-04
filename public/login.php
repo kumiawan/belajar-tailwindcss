@@ -26,14 +26,14 @@
         <h1 class="font-['Arial'] text-2xl block text-center font-semibold w-64 mx-auto"> SMA NEGERI 2 JEMBER</h1>
         <form action="" method="post">
           <div class="mt-16">
-            <input type="text" name="username" value="" class="border bg-green-100 rounded-[20px] h-14 w-full font-medium text-base px-6 py-1 focus:outline-none focus:ring-0 focus:border-green-600" placeholder="Enter NIS ..." />
+            <input type="text" name="username" value="Admin" class="border bg-green-100 rounded-[20px] h-14 w-full font-medium text-base px-6 py-1 focus:outline-none focus:ring-0 focus:border-green-600" placeholder="Enter NIS ..." />
           </div>
           <div class="mt-8">
             <input type="password" name="password" class="border bg-green-100 rounded-[20px] h-14 w-full text-base px-6 py-1 focus:outline-none focus:ring-0 focus:border-green-600" placeholder="Enter Password ..." />
           </div>
         </form>
           <div class="mt-3 p-3 flex justify-between items-center">
-            <div>
+            <div class="hidden">
               <input type="checkbox">
               <label>Remember Me</label>
             </div>

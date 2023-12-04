@@ -89,7 +89,7 @@
           onclick="exitLogout()"
           id="modalLogout"
           class="fixed bg-black w-screen h-screen bg-opacity-30 top-0 left-0 
-          justify-center items-center opacity-0 hidden transition-opacity duration-200 backdrop-blur-sm shadow">
+          justify-center items-center opacity-0 hidden transition-opacity duration-200 backdrop-blur-sm shadow z-50">
           <div 
             onclick="event.stopImmediatePropagation()"
             class="rounded-lg text-center bg-green-100 w-96 h-36">
@@ -114,54 +114,58 @@
         <div class="flex flex-col h-full w-full p-24">
           <div class="w-full h-16 flex justify-end items-center">
             <label for="" class="font-semibold text-xl">cari</label>
-            <input type="text" name="" value="" class="border-2 border-black w-64 h-1/2 ml-4 px-2">
+            <input id="searchInput" type="search" name="" value="" class="border-2 border-black w-64 h-1/2 ml-4 px-2">
           </div>
 
           <div class="h-full w-full">
             <table class="my-8 py-12 w-full">
-              <tr class="text-center">
-                <th class="border border-black">No</th>
-                <th class="border border-black">Nama</th>
-                <th class="border border-black">Kelas</th>
-                <th class="border border-black">Keterangan</th>
-                <th class="border border-black">Action</th>
-              </tr>
-              <tr class="text-center">
-                <td class="border border-black">1</td>
-                <td class="border border-black">Rahmatullah</td>
-                <td class="border border-black">XI MIPA 2</td>
-                <td class="border border-black">Izin</td>
-                <td class="border border-black gap-2 p-2">
-                  <button 
-                    onclick="permissionReceived('Berhasil Diterima!',3000)"
-                    type="" class="bg-green-500 w-20 text-white rounded-md hover:text-gray-200">Terima</button>
-                  <button 
-                    onclick="showBtnHapus()"
-                    type="" class="bg-red-700 w-20 text-white rounded-md hover:text-gray-200">Tolak</button>
-                  <button 
-                    onclick="showTambahSiswa()"
-                    id="detailSiswa"
-                    type="" class="bg-gray-500 w-20 text-white rounded-md hover:text-gray-200">Detail</button>
-                </td>
-              </tr>
-              <tr class="text-center">
-                <td class="border border-black">8</td>
-                <td class="border border-black">Fadias Nur Ahmadi</td>
-                <td class="border border-black">XI MIPA 2</td>
-                <td class="border border-black">Izin</td>
-                <td class="border border-black gap-2 p-2">
-                  <button 
-                    onclick="permissionReceived('Berhasil Diterima!',3000)"
-                    type="" class="bg-green-500 w-20 text-white rounded-md hover:text-gray-200">Terima</button>
-                  <button 
-                    onclick="showBtnHapus()"
-                    type="" class="bg-red-700 w-20 text-white rounded-md hover:text-gray-200">Tolak</button>
-                  <button 
-                    onclick="showTambahSiswa()"
-                    id="detailSiswa"
-                    type="" class="bg-gray-500 w-20 text-white rounded-md hover:text-gray-200">Detail</button>
-                </td>
-              </tr>
+              <thead id="tableHeader" class="sticky top-0 z-0">
+                <tr class="text-center bg-gray-200 shadow">
+                  <th class="border border-black">No</th>
+                  <th class="border border-black">Nama</th>
+                  <th class="border border-black">Kelas</th>
+                  <th class="border border-black">Keterangan</th>
+                  <th class="border border-black">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center table-row">
+                  <td class="border border-black">1</td>
+                  <td class="border border-black">Rahmatullah</td>
+                  <td class="border border-black">XI MIPA 2</td>
+                  <td class="border border-black">Izin</td>
+                  <td class="border border-black gap-2 p-2">
+                    <button 
+                      onclick="permissionReceived('Berhasil Diterima!',3000)"
+                      type="" class="bg-green-500 w-20 text-white rounded-md hover:text-gray-200">Terima</button>
+                    <button 
+                      onclick="showBtnHapus()"
+                      type="" class="bg-red-700 w-20 text-white rounded-md hover:text-gray-200">Tolak</button>
+                    <button 
+                      onclick="showTambahSiswa()"
+                      id="detailSiswa"
+                      type="" class="bg-gray-500 w-20 text-white rounded-md hover:text-gray-200">Detail</button>
+                  </td>
+                </tr>
+                <tr class="text-center table-row">
+                  <td class="border border-black">8</td>
+                  <td class="border border-black">Fadias Nur Ahmadi</td>
+                  <td class="border border-black">XI MIPA 2</td>
+                  <td class="border border-black">Izin</td>
+                  <td class="border border-black gap-2 p-2">
+                    <button 
+                      onclick="permissionReceived('Berhasil Diterima!',3000)"
+                      type="" class="bg-green-500 w-20 text-white rounded-md hover:text-gray-200">Terima</button>
+                    <button 
+                      onclick="showBtnHapus()"
+                      type="" class="bg-red-700 w-20 text-white rounded-md hover:text-gray-200">Tolak</button>
+                    <button 
+                      onclick="showTambahSiswa()"
+                      id="detailSiswa"
+                      type="" class="bg-gray-500 w-20 text-white rounded-md hover:text-gray-200">Detail</button>
+                  </td>
+                </tr>
+              </tbody>
             </table>
             <!-- start modal tombol terima  -->
             <div 
@@ -220,71 +224,71 @@
             </div>
             <!-- Start Modal Detail Siswa-->
             <div
-            onclick="showTambahSiswa()"
-            id="tambahSiswa"
-            class="fixed top-0 left-0 bg-black w-screen h-screen bg-opacity-50 justify-center items-center 
-            transition-opacity hidden opacity-0 duartion-200">
-            <div
-              class="relative w-1/2 h-4/5 bg-[#EAFFEF] rounded-lg my-10 mx-auto overflow-hidden">
-              <div 
-                class="p-2 bg-green-500 text-center font-semibold text-2xl text-white">
-                <h1>Detail Siswa ?nama_siswa</h1>
-                <div class="absolute top-1 right-6 font-semibold text-white text-3xl">
-                  <button
-                    onclick="hideTambahSiswa()"
-                    type="" class="hover:text-gray-200">X</button>
-                </div>
-              </div>
-              <div 
-                onclick="event.stopImmediatePropagation()"
-                class="p-16 rounded-b-lg">
-                <form>
-                  <div class="mb-2 w-full">
-                    <label for="" class="font-semibold inline-block w-52">Nis</label>
-                    <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
-                  </div>
-                  <div class="mb-2 w-full">
-                    <label for="" class="font-semibold inline-block w-52">Nama</label>
-                    <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
-                  </div>
-                  <div class="mb-2 w-full">
-                    <label for="" class="font-semibold inline-block w-52">Kelas</label>
-                    <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
-                  </div>
-                  <div class="mb-2 w-full">
-                    <label for="" class="font-semibold inline-block w-52">Jenis Kelamin</label>
-                    <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
-                  </div>
-                  <div class="mb-2 w-full">
-                    <label for="" class="font-semibold inline-block w-52">Alasan</label>
-                    <input type="text" name="" value="" class="inline-block border border-green-500 px-2 w-1/2 h-24">
-                  </div>
-                  <div class="flex mb-2 w-full">
-                    <label for="" class="font-semibold inline-block w-52">Berkas pendukung</label>
-                    <a href="https://cdn-cms.pgimgs.com/static/2022/04/Contoh-Surat-Persetujuan-Orang-Tua.pdf" target="_blank" class="flex text-blue-700">
-                      <img src="assets/icon/pdf.png" alt="" class="w-4 mx-1">
-                        file_izin_rahmatullah.pdf</a>
-                  </div>
-
-                </form>
+              onclick="showTambahSiswa()"
+              id="tambahSiswa"
+              class="fixed top-0 left-0 bg-black w-screen h-screen bg-opacity-50 justify-center items-center 
+              transition-opacity hidden opacity-0 duartion-200">
+              <div
+                class="relative w-1/2 h-4/5 bg-[#EAFFEF] rounded-lg my-10 mx-auto overflow-hidden">
                 <div 
-                  onclick="showNotifSuccess()"
-                  class="mt-6 flex w-full justify-end font-semibold text-white">
-                  <button type="" class="mr-6 p-2 bg-green-500 w-32 rounded-full">Simpan</button>
+                  class="p-2 bg-green-500 text-center font-semibold text-2xl text-white">
+                  <h1>Detail Siswa ?nama_siswa</h1>
+                  <div class="absolute top-1 right-6 font-semibold text-white text-3xl">
+                    <button
+                      onclick="hideTambahSiswa()"
+                      type="" class="hover:text-gray-200">X</button>
+                  </div>
+                </div>
+                <div 
+                  onclick="event.stopImmediatePropagation()"
+                  class="p-16 rounded-b-lg">
+                  <form>
+                    <div class="mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Nis</label>
+                      <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
+                    </div>
+                    <div class="mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Nama</label>
+                      <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
+                    </div>
+                    <div class="mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Kelas</label>
+                      <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
+                    </div>
+                    <div class="mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Jenis Kelamin</label>
+                      <input type="text" name="" value="" class="border border-green-500 px-2 w-1/2">
+                    </div>
+                    <div class="mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Alasan</label>
+                      <input type="text" name="" value="" class="inline-block border border-green-500 px-2 w-1/2 h-24">
+                    </div>
+                    <div class="flex mb-2 w-full">
+                      <label for="" class="font-semibold inline-block w-52">Berkas pendukung</label>
+                      <a href="https://cdn-cms.pgimgs.com/static/2022/04/Contoh-Surat-Persetujuan-Orang-Tua.pdf" target="_blank" class="flex text-blue-700">
+                        <img src="assets/icon/pdf.png" alt="" class="w-4 mx-1">
+                          file_izin_rahmatullah.pdf</a>
+                    </div>
+
+                  </form>
+                  <div 
+                    onclick="showNotifSuccess()"
+                    class="mt-6 flex w-full justify-end font-semibold text-white">
+                    <button type="" class="mr-6 p-2 bg-green-500 w-32 rounded-full">Simpan</button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- start notif berhasil-->
-            <div 
-              onclick="showNotifSuccess()"
-              id="successEdit"
-              class="absolute justify-between p-6 items-center text-green-500 text-xl font-semibold top-40 right-28 border rounded-lg bg-white w-60 h-12 transition-opacity hidden opacity-0 duartion-200">
-              <img src="assets/icon/check.png" alt="" class="w-10">
-              <h1> Data Berhasil diperbaharui </h1>
-            </div>
-            <!-- end notif berhasil-->
+              <!-- start notif berhasil-->
+              <div 
+                onclick="showNotifSuccess()"
+                id="successEdit"
+                class="absolute justify-between p-6 items-center text-green-500 text-xl font-semibold top-40 right-28 border rounded-lg bg-white w-60 h-12 transition-opacity hidden opacity-0 duartion-200">
+                <img src="assets/icon/check.png" alt="" class="w-10">
+                <h1> Data Berhasil diperbaharui </h1>
+              </div>
+              <!-- end notif berhasil-->
 
-          </div>
+            </div>
             <!-- End Modal form tambah siswa-->
           </div>
         </div>
@@ -293,5 +297,6 @@
       </div>
     </div>
     <script src="js/modal.js"></script>
+    <script src="js/search.js"></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
+// 11:06
 /* #LOGIN 
 @showModalHint
  * */
@@ -21,6 +22,14 @@ function exitHint() {
   },100);
 
 }
+
+function toggleStickyHeader(addSticky) {
+  const tableHeader = document.getElementById('tableHeader');
+  if (tableHeader) {
+    tableHeader.classList.toggle('sticky', addSticky);
+  }
+}
+
 function logout() {
   let show = document.getElementById('modalLogout');
   show.classList.add('opacity-100');
@@ -29,7 +38,7 @@ function logout() {
     show.classList.add('flex');
     show.classList.remove('hidden');
   },100);
-
+  toggleStickyHeader(false);
 }
 function exitLogout() {
   let exit = document.getElementById('modalLogout');
@@ -39,7 +48,7 @@ function exitLogout() {
     exit.classList.remove('flex');
     exit.classList.add('hidden');
   },100);
-
+  toggleStickyHeader(true);
 }
 /* Data Siswa */
 /* Modal btn Hapus*/

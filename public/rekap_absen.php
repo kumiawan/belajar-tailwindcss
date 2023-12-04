@@ -88,7 +88,7 @@
           onclick="exitLogout()"
           id="modalLogout"
           class="fixed bg-black w-screen h-screen bg-opacity-30 top-0 left-0 
-          justify-center items-center opacity-0 hidden transition-opacity duration-200 backdrop-blur-sm shadow">
+          justify-center items-center opacity-0 hidden transition-opacity duration-200 backdrop-blur-sm shadow z-50">
           <div 
             onclick="event.stopImmediatePropagation()"
             class="rounded-lg text-center bg-green-100 w-96 h-36">
@@ -113,12 +113,13 @@
         <div class="flex flex-col h-full w-full p-24">
           <div class="w-full h-16 flex justify-end items-center">
             <label for="" class="font-semibold text-xl">cari</label>
-            <input type="text" name="" value="" class="border-2 border-black w-64 h-1/2 ml-4 px-2">
+            <input id="searchInput" type="search" name="" value="" class="border-2 border-black w-64 h-1/2 ml-4 px-2">
           </div>
 
           <div class="h-full w-full overflow-auto">
-            <table class="my-8 py-12 w-full">
-              <tr class="text-center">
+            <table class="py-12 w-full">
+              <thead id="tableHeader" class="sticky top-0 z-0">
+              <tr class="text-center bg-gray-200 shadow">
                 <th class="border border-black">No</th>
                 <th class="border border-black">Nama</th>
                 <th class="border border-black">Kelas</th>
@@ -127,15 +128,26 @@
                 <th class="border border-black">Alpha</th>
                 <th class="border border-black">Presentase</th>
               </tr>
-              <tr class="text-center">
-                <td class="border border-black">1</td>
-                <td class="border border-black">Rahmatullah</td>
-                <td class="border border-black">XI A</td>
-                <td class="border border-black">-</td>
-                <td class="border border-black">-</td>
-                <td class="border border-black">-</td>
-                <td class="border border-black">100%</td>
-              </tr>
+              </thead>
+              <tbody>
+                <tr class="text-center table-row">
+                  <td class="border border-black">1</td>
+                  <td class="border border-black">Dimas Fajar Kurniawan</td>
+                  <td class="border border-black">XI A</td>
+                  <td class="border border-black">-</td>
+                  <td class="border border-black">-</td>
+                  <td class="border border-black">-</td>
+                  <td class="border border-black">100%</td>
+                </tr><tr class="text-center table-row">
+                  <td class="border border-black">9</td>
+                  <td class="border border-black">Rahmatullah</td>
+                  <td class="border border-black">XI A</td>
+                  <td class="border border-black">-</td>
+                  <td class="border border-black">-</td>
+                  <td class="border border-black">-</td>
+                  <td class="border border-black">100%</td>
+                </tr>
+              </tbody>
             </table>
             <!-- start modal tombol hapus-->
             <div 
@@ -237,5 +249,6 @@
       </div>
     </div>
     <script src="js/modal.js"></script>
+    <script src="js/search.js"></script>
   </body>
 </html>
